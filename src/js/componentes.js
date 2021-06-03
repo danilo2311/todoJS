@@ -52,11 +52,11 @@ divTodoList.addEventListener('click',(event) => {
     }
 });
 
-btnBorrar.addEventListener('click',() => {
-    todoList.marcarCompletado();
-    for(let i = divTodoList.children.length -1; i >= 0; i--){
+btnBorrar.addEventListener('click', () => {
+    todoList.eliminarCompletados();
+    for( let i = divTodoList.children.length-1; i >= 0; i-- ) {
         const elemento = divTodoList.children[i];
-        if(elemento.classList.contains('completed')){
+        if( elemento.classList.contains('completed') ){
             divTodoList.removeChild(elemento);
         }
     }
